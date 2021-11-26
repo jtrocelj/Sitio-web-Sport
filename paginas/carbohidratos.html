@@ -1,0 +1,94 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="js/carbo.js"></script>
+      <style>
+        article {
+            font: 15px sans-serif;
+            color: white;
+            }
+
+            input[type="button"] {
+            color: white;
+            background-color: #384e78;
+            border-radius: 5px;
+            border: 1px solid #2c3d5e;
+            padding: 10px;
+            }
+            #someform {
+            width: 250px;
+            height:320px;
+            background-color: #3f6d8a;
+            padding: 30px;
+            border-radius: 10px;
+            -webkit-box-shadow: 1px 0px 5px 0px rgba(50, 50, 50, 0.75);
+            -moz-box-shadow: 1px 0px 5px 0px rgba(50, 50, 50, 0.75);
+            box-shadow: 1px 0px 5px 0px rgba(50, 50, 50, 0.75);
+            }
+
+            .absolute-center {
+            margin: auto;
+            position: relative;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            }
+            #boton{
+            color: white;
+            background-color: #5A6268;
+            border-radius: 5px;
+            border: 1px solid #5A6268;
+            padding: 10px;
+            width:50px;
+            }
+    </style>
+  </head>
+  <body>
+    <article>
+      <h2 align="center" style="color:#9e7979">CÁLCULOS DE CARBOHIDRATOS DIARIOS</h2>
+        <form id="someform" class="absolute-center"  method="post">
+          <label for="first">Peso: </label>
+          <input name="first" type="text" id="peso" placeholder="Ingrese su peso en kg" required /><br><br>
+          <label for="first">Peso Objetivo: </label>
+          <input name="first" type="text" id="peso2"  style="width:210px;" placeholder="Ingrese el peso objetivo en kg" required /><br><br>
+          Actividad fisica:<br>
+          <label>
+            <input type="radio" id="sedentaria" name="actividad" value="sedentaria">Sedentaria<br>
+           </label>
+
+          <label>
+            <input type="radio" id="ligeramente" name="actividad" value="ligeramente">Ligeramente Activo<br>
+           </label>
+
+           <label>
+            <input type="radio" id="muy" name="actividad" value="muy">Muy activo<br>
+           </label>
+          
+           <label>
+            <input type="radio" id="extremadamente" name="actividad" value="extremadamente">Extremadamente Activo<br><br>
+           </label>
+           
+
+          Objetivo:
+          <select name="objetivo" id="objetivo">
+            <option value="masa">Ganar masa muscular</option>
+            <option value="adelgazar">Adelgazar</option>
+          </select><br><br>
+
+          <input type="text" id="resultado"  style="width:260px;"readonly>
+          <br><br>
+          <input type="button"  class="center" onclick="calcular()" value="Calcular" />
+          <input type="button" style="background-color:#E0A800" class="center" onclick="limpiar()" value="Limpiar" />
+        </form>
+      </article>
+     
+        
+       
+      <br><br><br>
+  </body>
+  </html>

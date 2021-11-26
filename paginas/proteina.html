@@ -1,0 +1,66 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="js/proteina.js"></script>
+      <style>
+        article {
+            font: 15px sans-serif;
+            color: white;
+            }
+
+            input[type="button"] {
+            color: white;
+            background-color: #384e78;
+            border-radius: 5px;
+            border: 1px solid #2c3d5e;
+            padding: 10px;
+            }
+            #someform {
+            width: 230px;
+            height:200px;
+            background-color: #3f6d8a;
+            padding: 30px;
+            border-radius: 10px;
+            -webkit-box-shadow: 1px 0px 5px 0px rgba(50, 50, 50, 0.75);
+            -moz-box-shadow: 1px 0px 5px 0px rgba(50, 50, 50, 0.75);
+            box-shadow: 1px 0px 5px 0px rgba(50, 50, 50, 0.75);
+            }
+
+            .absolute-center {
+            margin: auto;
+            position: relative;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            }
+
+    </style>
+  </head>
+  <body>
+    <article>
+        <h2 align="center" style="color:#9e7979">CÁLCULO DE PROTEÍNAS DIARIAS</h2>
+        <form id="someform" class="absolute-center"  method="post">
+          <label for="first">Peso: </label>
+          <input name="first" type="text" id="peso"  style="width:210px;" placeholder="Ingrese el peso objetivo" required /><br><br>
+
+          Objetivo:
+          <select name="objetivo" id="objetivo" required>
+            <option value="masa">Ganar masa muscular</option>
+            <option value="adelgazar">Adelgazar</option>
+          </select><br><br>
+
+          <input type="text" id="resultado"  style="width:210px;"readonly>
+          <br><br>
+          <input type="button"  class="center" onclick="calcular()" value="Calcular" />
+          <input type="button" style="background-color:#E0A800" class="center" onclick="limpiar()" value="Limpiar" />
+        </form>
+      </article>
+
+      <br><br><br>
+  </body>
+  </html>

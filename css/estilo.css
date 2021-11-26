@@ -1,0 +1,224 @@
+@charset "utf-8";
+*{
+	font-family:sans-serif;
+  }
+  p{
+    font-size: 18px;
+	font-family:sans-serif;
+    font-style: italic; /* cursiva */
+}
+html {
+	min-height: 100%;
+	position: relative;
+  }
+body{
+    background-color: white;
+	margin: 0;
+	width: 100%;
+}
+
+header{
+	width: 100%;
+	height: 60px;
+	background: #001E6C;
+}
+
+.navegacion ul{
+	align-items: center; 
+	margin: 0 auto;
+	list-style-type: none;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+}
+
+li > a{
+	display: block;
+	padding: 15px;
+	font-family: "Open Sans";
+	text-decoration: none;
+	color: #fff ;
+}
+ li a:hover{
+	color: #ff8013;
+    transition: all 0.5s;
+	
+  }
+  #logo{
+	float: left;
+	margin-top: -10px;
+}
+.navegacion li  ul{
+	position:absolute;
+	top:35px;
+	left:100;
+	background: #001E6C;
+	display:none;
+	z-index: 100;
+	}
+
+.navegacion li:hover ul, .navegacion li.over ul{display:block;}
+
+.navegacion li ul li{
+	border:1px solid #ff8013;
+	display:block;
+	width:170px;
+	}
+/* INICIO RESPONSIVE */
+#btn-menu{
+	display: none;
+}
+header label{
+	display: none;
+	width: 30px;
+	height: 30px;
+	padding: 10px;
+}
+
+header label:hover{
+	cursor: pointer;
+	background: rgba(0,0,0,0.3);
+}
+
+main{
+	padding: 40px;
+}
+
+@media (max-width:768px){
+	header label{
+		display: block;
+	}
+	#logo{
+	float: none;
+	}
+	.navegacion{
+		 position: absolute;
+		 background: #001E6C;
+		 width: 40%;
+		 margin-left:-70%;
+		 transition: all 0.4s;
+		 z-index: 100;
+	}
+	.navegacion ul {
+		flex-direction: column;
+	}
+	.navegacion li {
+		border-top: 1px solid #ff8013;
+	}
+
+	#btn-menu:checked ~ .navegacion{
+		margin: 0;
+	}
+	.navegacion li  ul{
+		position:absolute;
+		margin-left: 80px;
+		top:180px;
+		left:100;
+		background: #001E6C;
+		z-index: 100;
+		}
+		
+		main img{
+			width: 100%;
+		}
+		#inicio{
+			width:"20px";
+			height:"20px";
+		}
+		#imc{
+			width: 100%;
+		}
+}
+/* FIN RESPONSIVE */
+
+
+ 
+@media (max-width:940px){
+	.tabla-responsive {
+        width: 80%;
+		margin-left: 25px;
+        margin-bottom: 15px;
+        overflow-y: hidden;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        border: 1px solid #ddd;
+    }   
+}
+@media (max-width:1028px){
+	main .banner{
+		width: 80%;
+	}
+}
+/* FIN RESPONSIVE */
+
+
+.banner{
+	width: 100%;
+	height: 350px;
+	background-size: 100% 100%;
+	animation-name: banner;
+	animation-duration:10s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes banner{
+	0%, 30%{
+		background-image:url(../img/park-min.jpg);
+		opacity: 1;
+	}
+	31%, 34%{
+		opacity: 0.1;
+	}
+	35%, 65%{
+		background-image:url(../img/man-min.jpg);
+		opacity: 1;
+	}
+	66%, 69%{
+		opacity: 0.1;
+	}
+	70%, 100%{
+		background-image:url(../img/deportista-min.jpg);
+		opacity: 1;
+	}
+}
+
+footer{
+	clear:both;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background-color: #FFAA4C;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	justify-content: space-between;
+	
+}
+
+.logo{
+	height: 60px;
+	padding: 0;
+	padding-left: 8px;
+}
+.iconos-contactos{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-bottom: -1rem;
+}
+.copyright{
+	color: #fff ;
+	text-align: center;
+	padding-right: 20px;
+}
+.ir-arriba{
+	display:none;
+	padding:20px;
+	
+	color: #fff;
+	cursor: pointer;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+}
